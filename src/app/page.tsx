@@ -85,7 +85,7 @@ export default function Dashboard() {
         <main className="p-6 space-y-8">
           {/* Welcome Section */}
           <div className="text-center py-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl mb-6 animate-float">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 animate-float" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
               <Zap className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-ppmori-semibold">
@@ -207,13 +207,13 @@ export default function Dashboard() {
                     <span>RPC: rpc.plasma.to</span>
                   </div>
                 </div>
-                <div className="hidden md:flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl animate-pulse-slow">
+                <div className="hidden md:flex items-center justify-center w-20 h-20 rounded-3xl animate-pulse-slow" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-              </div>
+        </div>
             </CardContent>
           </Card>
-        </main>
+      </main>
       </div>
     </div>
   );

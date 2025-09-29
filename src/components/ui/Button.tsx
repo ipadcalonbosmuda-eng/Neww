@@ -7,7 +7,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-gradient-to-r from-emerald-400 to-teal-500 text-white hover:from-emerald-500 hover:to-teal-600 hover:shadow-lg hover:-translate-y-0.5',
+        primary: 'text-white hover:shadow-lg hover:-translate-y-0.5',
         secondary: 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 hover:border-gray-300',
         outline: 'border-2 border-emerald-400 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700',
         ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
@@ -34,10 +34,16 @@ export interface ButtonProps
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, loading, children, disabled, ...props }, ref) => {
+  ({ className, variant, size, loading, children, disabled, style, ...props }, ref) => {
+    const primaryStyle = variant === 'primary' ? {
+      background: 'linear-gradient(to right, #34d399, #14b8a6)',
+      ...style
+    } : style;
+
     return (
       <button
         className={clsx(buttonVariants({ variant, size, className }))}
+        style={primaryStyle}
         ref={ref}
         disabled={disabled || loading}
         {...props}

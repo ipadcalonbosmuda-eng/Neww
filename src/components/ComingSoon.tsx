@@ -55,7 +55,7 @@ export function ComingSoon({
     <div className="min-h-[60vh] flex items-center justify-center p-6">
       <div className="text-center max-w-2xl mx-auto">
         {/* Icon */}
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl mb-8 animate-float">
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl mb-8 animate-float" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
           <Icon className="w-10 h-10 text-white" />
         </div>
 
@@ -69,7 +69,7 @@ export function ComingSoon({
           <CardContent className="p-8">
             {isLive ? (
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="text-3xl font-bold text-emerald-600 mb-2 font-ppmori-semibold">
@@ -86,7 +86,7 @@ export function ComingSoon({
                 {/* Countdown Timer */}
                 <div className="flex justify-center gap-6 mb-6">
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-2" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
                       <span className="text-2xl font-bold text-white font-ppmori-semibold">
                         {timeLeft.hours.toString().padStart(2, '0')}
                       </span>
@@ -97,7 +97,7 @@ export function ComingSoon({
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-2" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
                       <span className="text-2xl font-bold text-white font-ppmori-semibold">
                         {timeLeft.minutes.toString().padStart(2, '0')}
                       </span>
@@ -108,7 +108,7 @@ export function ComingSoon({
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-2" style={{background: 'linear-gradient(to right, #34d399, #14b8a6)'}}>
                       <span className="text-2xl font-bold text-white font-ppmori-semibold">
                         {timeLeft.seconds.toString().padStart(2, '0')}
                       </span>

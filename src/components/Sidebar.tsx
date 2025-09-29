@@ -71,7 +71,7 @@ export function Sidebar({ className }: SidebarProps) {
           {/* Logo */}
           <div className="flex items-center h-16 px-6 border-b border-gray-200/50">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{background: 'linear-gradient(to bottom right, #34d399, #14b8a6)'}}>
                 <span className="text-white font-bold text-lg">P</span>
               </div>
               <div className="ml-3">
