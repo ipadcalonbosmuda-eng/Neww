@@ -62,20 +62,25 @@ export function Sidebar({ className }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={clsx(
-          'fixed inset-y-0 left-0 z-40 w-80 bg-white/95 backdrop-blur-sm border-r border-gray-200/50 transform transition-transform duration-300 ease-in-out lg:translate-x-0',
+          'fixed inset-y-0 left-0 z-40 w-80 backdrop-blur-sm border-r transform transition-transform duration-300 ease-in-out lg:translate-x-0',
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full',
           className
         )}
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          borderColor: 'rgba(229, 231, 235, 0.5)',
+          boxShadow: '2px 0 10px rgba(0, 0, 0, 0.05)'
+        }}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center h-16 px-6 border-b border-gray-200/50">
+          <div className="flex items-center h-16 px-6 border-b" style={{borderColor: 'rgba(229, 231, 235, 0.5)'}}>
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{background: 'linear-gradient(to bottom right, #34d399, #14b8a6)'}}>
                 <span className="text-white font-bold text-lg">P</span>
               </div>
               <div className="ml-3">
-                <h1 className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold gradient-text">
                   Plasmatic
                 </h1>
                 <p className="text-sm text-gray-500">Web3 Tools for Plasma</p>
@@ -98,9 +103,13 @@ export function Sidebar({ className }: SidebarProps) {
                         className={clsx(
                           'flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 hover:translate-x-1',
                           isActive
-                            ? 'bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 border border-emerald-200'
+                            ? 'text-emerald-700 border'
                             : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                         )}
+                        style={isActive ? {
+                          background: 'linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(0, 168, 138, 0.1))',
+                          borderColor: 'rgba(0, 212, 170, 0.3)'
+                        } : {}}
                       >
                         <item.icon
                           className={clsx(
@@ -132,9 +141,13 @@ export function Sidebar({ className }: SidebarProps) {
                         className={clsx(
                           'flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 hover:translate-x-1 group',
                           isActive
-                            ? 'bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 border border-emerald-200'
+                            ? 'text-emerald-700 border'
                             : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                         )}
+                        style={isActive ? {
+                          background: 'linear-gradient(135deg, rgba(0, 212, 170, 0.15), rgba(0, 168, 138, 0.1))',
+                          borderColor: 'rgba(0, 212, 170, 0.3)'
+                        } : {}}
                       >
                         <item.icon
                           className={clsx(
