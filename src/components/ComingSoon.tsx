@@ -65,7 +65,7 @@ export function ComingSoon({
         </h1>
 
         {/* Timer Card */}
-        <Card className="mb-8 bg-gradient-to-r from-white via-white to-gray-50 border-0 shadow-xl">
+        <Card className="mb-8 bg-white border-0 shadow-xl">
           <CardContent className="p-8">
             {isLive ? (
               <div className="text-center">
