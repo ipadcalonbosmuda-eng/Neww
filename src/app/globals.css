@@ -46,7 +46,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen;
+    min-height: 100vh;
     background-color: #f9fafb;
     font-feature-settings: "rlig" 1, "calt" 1;
     color: #1a1a1a;
@@ -137,20 +137,26 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full;
+  background-color: #d1d5db;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
+  background-color: #9ca3af;
 }
 
 /* Focus styles */
 .focus-ring {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2;
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }
 
 /* Loading states */

@@ -9,7 +9,7 @@ const buttonVariants = cva(
       variant: {
         primary: 'text-white hover:shadow-lg hover:-translate-y-0.5',
         secondary: 'bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 hover:border-gray-300',
-        outline: 'border-2 border-emerald-400 text-emerald-600 hover:bg-emerald-50 hover:text-emerald-700',
+        outline: 'border-2 hover:opacity-80',
         ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100',
         danger: 'bg-red-500 text-white hover:bg-red-600',
       },
@@ -35,15 +35,27 @@ export interface ButtonProps
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, loading, children, disabled, style, ...props }, ref) => {
-    const primaryStyle = variant === 'primary' ? {
-      background: 'linear-gradient(to right, #34d399, #14b8a6)',
-      ...style
-    } : style;
+    const getVariantStyle = () => {
+      if (variant === 'primary') {
+        return {
+          background: 'linear-gradient(to right, #34d399, #14b8a6)',
+          ...style
+        };
+      }
+      if (variant === 'outline') {
+        return {
+          borderColor: '#34d399',
+          color: '#059669',
+          ...style
+        };
+      }
+      return style;
+    };
 
     return (
       <button
         className={clsx(buttonVariants({ variant, size, className }))}
-        style={primaryStyle}
+        style={getVariantStyle()}
         ref={ref}
         disabled={disabled || loading}
         {...props}
