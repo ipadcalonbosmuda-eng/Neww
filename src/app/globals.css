@@ -46,7 +46,8 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 min-h-screen;
+    @apply min-h-screen;
+    background-color: #f9fafb;
     font-feature-settings: "rlig" 1, "calt" 1;
     color: #1a1a1a;
   }

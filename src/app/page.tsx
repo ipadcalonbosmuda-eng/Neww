@@ -65,7 +65,7 @@ export default function Dashboard() {
   const { isConnected, balance } = useWeb3();
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{backgroundColor: '#f9fafb'}}>
       <Sidebar />
       
       {/* Main Content */}
@@ -112,7 +112,7 @@ export default function Dashboard() {
                         {stat.value}
                       </p>
                     </div>
-                    <div className={`p-3 rounded-xl bg-gray-100`}>
+                    <div className="p-3 rounded-xl" style={{backgroundColor: '#f3f4f6'}}>
                       <stat.icon className={`w-6 h-6 ${stat.color}`} />
                     </div>
                   </div>
