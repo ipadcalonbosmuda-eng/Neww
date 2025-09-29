@@ -2,13 +2,18 @@ import { HTMLAttributes, forwardRef } from 'react';
 import { clsx } from 'clsx';
 
 const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
-  ({ className, ...props }, ref) => (
+  ({ className, style, ...props }, ref) => (
     <div
       ref={ref}
       className={clsx(
-        'rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-sm hover:shadow-md transition-all duration-200',
+        'rounded-2xl backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200',
         className
       )}
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        border: '1px solid rgba(229, 231, 235, 0.5)',
+        ...style
+      }}
       {...props}
     />
   )
