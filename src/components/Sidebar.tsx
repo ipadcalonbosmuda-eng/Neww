@@ -62,19 +62,14 @@ export function Sidebar({ className }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={clsx(
-          'fixed inset-y-0 left-0 z-40 w-80 backdrop-blur-sm border-r transform transition-transform duration-300 ease-in-out lg:translate-x-0',
+          'fixed inset-y-0 left-0 z-40 w-80 bg-white backdrop-blur-sm border-r border-gray-200 transform transition-transform duration-300 ease-in-out lg:translate-x-0 shadow-lg',
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full',
           className
         )}
-        style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.95)',
-          borderColor: 'rgba(229, 231, 235, 0.5)',
-          boxShadow: '2px 0 10px rgba(0, 0, 0, 0.05)'
-        }}
       >
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center h-16 px-6 border-b" style={{borderColor: 'rgba(229, 231, 235, 0.5)'}}>
+          <div className="flex items-center h-16 px-6 border-b border-gray-200">
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{background: 'linear-gradient(to bottom right, #34d399, #14b8a6)'}}>
                 <span className="text-white font-bold text-lg">P</span>

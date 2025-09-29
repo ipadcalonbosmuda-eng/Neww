@@ -6,14 +6,10 @@ const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     <div
       ref={ref}
       className={clsx(
-        'rounded-2xl backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200',
+        'rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200',
         className
       )}
-      style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        border: '1px solid rgba(229, 231, 235, 0.5)',
-        ...style
-      }}
+      style={style}
       {...props}
     />
   )

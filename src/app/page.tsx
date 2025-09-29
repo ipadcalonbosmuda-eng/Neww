@@ -65,13 +65,13 @@ export default function Dashboard() {
   const { isConnected, balance } = useWeb3();
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#f9fafb'}}>
+    <div className="min-h-screen bg-gray-50">
       <Sidebar />
       
       {/* Main Content */}
       <div className="lg:ml-80">
         {/* Header */}
-        <header className="sticky top-0 z-30 backdrop-blur-sm border-b" style={{backgroundColor: 'rgba(255, 255, 255, 0.8)', borderColor: 'rgba(229, 231, 235, 0.5)'}}>
+        <header className="sticky top-0 z-30 bg-white backdrop-blur-sm border-b border-gray-200 shadow-sm">
           <div className="flex items-center justify-between px-6 py-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 font-ppmori-semibold">Dashboard</h1>
